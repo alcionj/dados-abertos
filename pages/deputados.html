@@ -61,13 +61,13 @@ async function getContent(){
  for(let i in data.dados){
  
  output += 	'<div  id="'+ i +'" style="padding-bottom:15px;" class="card  col-lg-2 col-2 shadow-sm " data-string="'+ data.dados[i].nome + data.dados[i].siglaPartido + data.dados[i].siglaUf +'">' +
-			'<img class="w-100 hover-shadow" src="'+ data.dados[i].urlFoto +'" alt="Card image cap" style="width: 110%;">' +
-				'<div class="">' +
-					'<h6 class=" alert-heading">' + data.dados[i].nome + '</h6>' +
-					'<p class="fs-8">' + data.dados[i].siglaPartido +' / ' + data.dados[i].siglaUf +'</p>' +
-					'<p class="fs-8 text-light bg-dark text-center">' + data.dados[i].email +'</p>' +
-					'<a href="detalhes_deputados.html?id='+ data.dados[i].id +'" target="_blank" class="btn btn-secondary btn-sm btn-block">Detalhes</a>' +
-				'</div>' +
+            '<span class="badge bg-success">' + data.dados[i].siglaPartido +' / ' + data.dados[i].siglaUf + '</span>' + 
+		      	'<img class="w-100 hover-shadow" src="'+ data.dados[i].urlFoto +'" alt="Card image cap" style="width: 110%;">' +
+			    	'<div class="">' +
+			  		'<b>' + data.dados[i].nome + '</b><br>' +
+			  		'<a href="detalhes_deputados.html?id='+ data.dados[i].id +'" target="_blank" class="btn btn-secondary btn-sm btn-block">Detalhes</a>' +
+            '<a href="despesas_deputados.html?id='+ data.dados[i].id +'" target="_blank" class="btn btn-secondary btn-sm btn-block">Despesas</a>' +   
+			    	'</div>' +
 			'</div>'
  }
  output +='</div>'
