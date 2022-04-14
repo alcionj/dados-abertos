@@ -23,38 +23,49 @@ async function load(){
 	   ultimoStatusData = new Date(data.dados.ultimoStatus.data).toLocaleDateString('pt-BR')
 	 }
 	 let output = ''
-	     output += '<form class="row g-3">' +			   
-						'<fieldset class="border p-2">' +
-						   '<legend  class="float-none w-auto p-2">Dados Pessoais</legend>' +
-							'<b>Nome civíl:   </b>'+ data.dados.nomeCivil +' <br>' +
-							'<b>Data de Nascimento:   </b>'+ dataNascimento +' <br>' +
-							'<b>Data de falecimento:   </b>'+ dataFalecimento +' <br>' +
-							'<b>CPF:   </b>'+ data.dados.cpf +' <br>' +
-							'<b>Escolaridade:   </b>'+ data.dados.escolaridade +' <br>' +
-							'<b>Município de nascimento:   </b>'+ data.dados.municipioNascimento +' <br>' +
-							'<b>Estado de nascimento:   </b>'+ data.dados.ufNascimento +' <br>' +
-							'<b>Sexo:   </b>'+ data.dados.sexo +' <br>' +
+	     output += '<form class="">' +		
+                   '<div class="row">' +	
+                        '<div class="col">' +				   
+						'<fieldset>' +
+						   '<legend>Dados Pessoais</legend>' +
+							'<b>Nome Civil:</b>'+ data.dados.nomeCivil +'</br>' +
+							'<b>Data de Nascimento:</b>'+ dataNascimento +' <br>' +
+							'<b>Data de falecimento:</b>'+ dataFalecimento +' <br>' +
+							'<b>CPF:</b>'+ data.dados.cpf +' <br>' +
+							'<b>Escolaridade:</b>'+ data.dados.escolaridade +' <br>' +
+							'<b>Município de nascimento:</b>'+ data.dados.municipioNascimento +' <br>' +
+							'<b>Estado de nascimento:</b>'+ data.dados.ufNascimento +' <br>' +
+							'<b>Sexo:</b>'+ data.dados.sexo +' <br>' +
 						 '</fieldset>' +
-						 '<fieldset class="border p-2">' +
-						   '<legend  class="float-none w-auto p-2">Último Status</legend>' +
-							'<b>Condição Eleitoral:   </b>'+ data.dados.ultimoStatus.condicaoEleitoral +' <br>' +
-							'<b>E-mail:   </b>'+ data.dados.ultimoStatus.email +' <br>' +
-							'<b>Data:   </b>'+ ultimoStatusData +' <br>' +
-							'<b>Id Legislatura:   </b>'+ data.dados.ultimoStatus.idLegislatura +' <br>' +
-							'<b>Nome:   </b>'+ data.dados.ultimoStatus.nome +' <br>' +
-							'<b>Sigla Partido:   </b>'+ data.dados.ultimoStatus.siglaPartido +' <br>' +
-							'<b>Sigla UF:   </b>'+ data.dados.ultimoStatus.siglaUf +' <br>' +
-							'<b>Situação:   </b>'+ data.dados.ultimoStatus.situacao +' <br>' +
+						 '</div>' +
+						 '<div class="col">' +
+						 '<fieldset>' +
+						   '<legend>Último Status</legend>' +
+							'<b>Condição Eleitoral:</b>'+ data.dados.ultimoStatus.condicaoEleitoral +' <br>' +
+							'<b>E-mail:</b>'+ data.dados.ultimoStatus.email +' <br>' +
+							'<b>Data:</b>'+ ultimoStatusData +' <br>' +
+							'<b>Id Legislatura:</b>'+ data.dados.ultimoStatus.idLegislatura +' <br>' +
+							'<b>Nome:</b>'+ data.dados.ultimoStatus.nome +' <br>' +
+							'<b>Sigla Partido:</b>'+ data.dados.ultimoStatus.siglaPartido +' <br>' +
+							'<b>Sigla UF:</b>'+ data.dados.ultimoStatus.siglaUf +' <br>' +
+							'<b>Situação:</b>'+ data.dados.ultimoStatus.situacao +' <br>' +
 						 '</fieldset>' +
-						  '<fieldset class="border p-2">' +
-						   '<legend  class="float-none w-auto p-2">Gabinete</legend>' +
-							'<b>Andar:   </b>'+ data.dados.ultimoStatus.gabinete.andar +' <br>' +
-							'<b>E-mail:   </b>'+ data.dados.ultimoStatus.gabinete.email +' <br>' +
-							'<b>Nome:   </b>'+ data.dados.ultimoStatus.gabinete.nome +' <br>' +
-							'<b>Prédio:   </b>'+ data.dados.ultimoStatus.gabinete.predio +' <br>' +
-							'<b>Sala:   </b>'+ data.dados.ultimoStatus.gabinete.sala +' <br>' +
-							'<b>Telefone:   </b>'+ data.dados.ultimoStatus.gabinete.telefone +' <br>' +
+						 '</div>' +
+			        '</div>' +
+					'<br>' +
+					'<div class="row">' +	
+						 '<div class="col">' +
+						  '<fieldset>' +
+						   '<legend>Gabinete</legend>' +
+							'<b>Andar:</b>'+ data.dados.ultimoStatus.gabinete.andar +' <br>' +
+							'<b>E-mail:</b>'+ data.dados.ultimoStatus.gabinete.email +' <br>' +
+							'<b>Nome:</b>'+ data.dados.ultimoStatus.gabinete.nome +' <br>' +
+							'<b>Prédio:</b>'+ data.dados.ultimoStatus.gabinete.predio +' <br>' +
+							'<b>Sala:</b>'+ data.dados.ultimoStatus.gabinete.sala +' <br>' +
+							'<b>Telefone:</b>'+ data.dados.ultimoStatus.gabinete.telefone +' <br>' +
 						 '</fieldset>' +
+						 '</div>' +
+				   '</div>' +
 				   '</form>' +
 				   '<br>';
 	 document.querySelector('main').innerHTML = output;
