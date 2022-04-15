@@ -38,7 +38,7 @@ footerTemplate.innerHTML = `
   <div class="container">
   <footer  class="d-flex flex-wrap justify-content-center py-3 mb-4 border-top">
     <ul>
-      <li><a href="#">Dados Abertos - 2022</a></li>
+      <li><a href="#">Dados Abertos - 2022 v1.0.0</a></li>
     </ul>
   </footer>
   </div>
